@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  loading = false;
 
   constructor() { }
 
   ngOnInit() {
   }
-
+  public doRequest(): void {
+    this.loading = true;
+    setTimeout(() => {
+      this.loading = false;
+    }, 2000)
+  }
 }
